@@ -78,7 +78,7 @@ class Program(AppMemorise):
                 cursor.execute('SELECT * FROM notes')
                 for line in cursor.fetchall():
                     identification, title, description = line
-                    if self.input_number.text() in str(identification):
+                    if self.input_number.text() == str(identification):
                         self.display.append(description)
                         msg = f'ID: {identification} - Título: {title}'
                         self.input_search.setText(msg)
